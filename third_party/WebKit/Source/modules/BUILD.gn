@@ -129,6 +129,7 @@ target("jumbo_" + modules_target_type, "modules") {
     "//third_party/WebKit/Source/modules/mediasession",
     "//third_party/WebKit/Source/modules/mediasource",
     "//third_party/WebKit/Source/modules/mediastream",
+    "//third_party/WebKit/Source/modules/ml",
     "//third_party/WebKit/Source/modules/navigatorcontentutils",
     "//third_party/WebKit/Source/modules/netinfo",
     "//third_party/WebKit/Source/modules/nfc",
