@@ -109,6 +109,9 @@
           "face_detection",
           "text_detection"
         ],
+        "ml": [
+	  "neuralnetwork"
+        ],
         "resource_coordinator": [
           "coordination_unit",
           "coordination_unit_introspector",
@@ -178,6 +181,7 @@
           "shape_detection::mojom::BarcodeDetection",
           "shape_detection::mojom::FaceDetectionProvider",
           "shape_detection::mojom::TextDetection",
+          "ml::mojom::NeuralNetwork",
           "ui::mojom::Gpu",
           "webauth::mojom::Authenticator"
         ]
@@ -196,7 +200,8 @@
           "payments::mojom::PaymentManager",
           "shape_detection::mojom::BarcodeDetection",
           "shape_detection::mojom::FaceDetectionProvider",
-          "shape_detection::mojom::TextDetection"
+          "shape_detection::mojom::TextDetection",
+          "ml::mojom::NeuralNetwork"
         ]
       }
     },
@@ -213,7 +218,8 @@
           "payments::mojom::PaymentManager",
           "shape_detection::mojom::BarcodeDetection",
           "shape_detection::mojom::FaceDetectionProvider",
-          "shape_detection::mojom::TextDetection"
+          "shape_detection::mojom::TextDetection",
+          "ml::mojom::NeuralNetwork"
         ]
       }
     },
@@ -228,7 +234,8 @@
           "payments::mojom::PaymentManager",
           "shape_detection::mojom::BarcodeDetection",
           "shape_detection::mojom::FaceDetectionProvider",
-          "shape_detection::mojom::TextDetection"
+          "shape_detection::mojom::TextDetection",
+          "ml::mojom::NeuralNetwork"
         ]
       }
     }
