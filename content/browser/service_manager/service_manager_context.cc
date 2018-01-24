@@ -69,6 +69,8 @@
 #include "services/service_manager/sandbox/sandbox_type.h"
 #include "services/service_manager/service_manager.h"
 #include "services/shape_detection/public/interfaces/constants.mojom.h"
+#include "services/ml/public/interfaces/constants.mojom.h"
+#include "services/ml/ml_service.h"
 #include "services/video_capture/public/cpp/constants.h"
 #include "services/video_capture/public/interfaces/constants.mojom.h"
 #include "services/viz/public/interfaces/constants.mojom.h"
@@ -520,6 +522,14 @@ ServiceManagerContext::ServiceManagerContext() {
     info.factory = base::BindRepeating(&metrics::CreateMetricsService);
     packaged_services_connection_->AddEmbeddedService(
         metrics::mojom::kMetricsServiceName, info);
+  }
+
+  {
+    service_manager::EmbeddedServiceInfo info;
+    info.factory = base::Bind(&ml::MLService::Create);
+    info.task_runner = base::ThreadTaskRunnerHandle::Get();
+    packaged_services_connection_->AddEmbeddedService(
+        ml::mojom::kServiceName, info);
   }
 
   ContentBrowserClient::StaticServiceMap services;

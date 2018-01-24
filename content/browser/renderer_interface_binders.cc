@@ -31,6 +31,8 @@
 #include "services/shape_detection/public/interfaces/constants.mojom.h"
 #include "services/shape_detection/public/interfaces/facedetection_provider.mojom.h"
 #include "services/shape_detection/public/interfaces/textdetection.mojom.h"
+#include "services/ml/public/interfaces/constants.mojom.h"
+#include "services/ml/public/interfaces/neuralnetwork.mojom.h"
 #include "third_party/WebKit/public/platform/modules/notifications/notification_service.mojom.h"
 #include "url/origin.h"
 
@@ -112,6 +114,9 @@ void GetRestrictedCookieManagerForWorker(
 // interface requests from frames, binders registered on the frame itself
 // override binders registered here.
 void RendererInterfaceBinders::InitializeParameterizedBinderRegistry() {
+  parameterized_binder_registry_.AddInterface(base::Bind(
+      &ForwardServiceRequest<ml::mojom::NeuralNetwork>,
+      ml::mojom::kServiceName));
   parameterized_binder_registry_.AddInterface(base::Bind(
       &ForwardServiceRequest<shape_detection::mojom::BarcodeDetection>,
       shape_detection::mojom::kServiceName));
