@@ -2217,6 +2217,9 @@ const FeatureEntry kFeatureEntries[] = {
      flag_descriptions::kWebXrOrientationSensorDeviceName,
      flag_descriptions::kWebXrOrientationSensorDeviceDescription, kOsAll,
      FEATURE_VALUE_TYPE(features::kWebXrOrientationSensorDevice)},
+    {"webml", flag_descriptions::kWebMlName,
+     flag_descriptions::kWebMlDescription, kOsAll,
+     FEATURE_VALUE_TYPE(features::kWebMl)},
 #if BUILDFLAG(ENABLE_VR)
     {"webvr-vsync-align", flag_descriptions::kWebVrVsyncAlignName,
      flag_descriptions::kWebVrVsyncAlignDescription, kOsAndroid,

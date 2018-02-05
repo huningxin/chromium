@@ -1643,6 +1643,10 @@ const char kWebXrDescription[] =
     "Allow web applications to access experimental APIs to interact with "
     "Virtual Reality (VR) and Augmented Reality (AR) devices.";
 
+const char kWebMlName[] = "WebML";
+const char kWebMlDescription[] =
+    "Allow web applications to access experimental WebML APIs";
+
 const char kWebXrOrientationSensorDeviceName[] =
     "WebXR orientation sensor device";
 const char kWebXrOrientationSensorDeviceDescription[] =

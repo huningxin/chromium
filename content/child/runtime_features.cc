@@ -217,6 +217,9 @@ void SetRuntimeFeaturesDefaultsAndUpdateFromArgs(
 
   WebRuntimeFeatures::EnableWebXR(
       base::FeatureList::IsEnabled(features::kWebXr));
+  
+  WebRuntimeFeatures::EnableWebML(
+      base::FeatureList::IsEnabled(features::kWebMl));
 
   if (command_line.HasSwitch(switches::kDisablePresentationAPI))
     WebRuntimeFeatures::EnablePresentationAPI(false);
